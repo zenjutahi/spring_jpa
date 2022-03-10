@@ -1,6 +1,16 @@
 package com.learing.jpa.concepts.javalearningjpa.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+//store user in a table thus create an entity
+
+@Entity
 public class User {
+	
+	@Id
+	@GeneratedValue
 	private long id;
 	private String name;
 	private String role;
@@ -26,7 +36,5 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", role=" + role + "]";
 	}
-	
-	
 	
 }
